@@ -1,0 +1,46 @@
+<div class="col-md-4 col-xs-12">
+  <div class="sidebar-content related-post">
+    <h3>最近の記事</h3>
+    <ul class="list-group">
+      {{ range first 5 .Site.RegularPages }}
+      <li class="list-group-item"><a href="{{ .Permalink }}" onClick="ga('send','event','link','click','latest-posts');">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ $related := .Site.RegularPages.Related . | first 5 }}
+  {{ with $related }}
+  <div class="sidebar-content related-post">
+    <h3>関連する記事</h3>
+    <ul class="list-group">
+      {{ range . }}
+      <li class="list-group-item"><a href="{{ .Permalink }}" onClick="ga('send','event','link','click','related-posts');">{{ .Title }}</a> ({{ .Date.Format "2006/01/02" }})</li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  <div class="sidebar-content related-post">
+    <h3>カテゴリー</h3>
+    <ul class="list-group">
+      {{ range $key, $value := .Site.Taxonomies.categories }}
+      <li class="list-group-item">
+        <a href="/categories/{{ $key }}">{{ $key }} ({{$value.Count}})</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  <div class="sidebar-content related-post">
+    <h3>アーカイブ</h3>
+    <ul class="list-group">
+      {{ range $key, $value := .Site.Taxonomies.archive }}
+      <li class="list-group-item">
+        <a href="/archive/{{ $key }}">{{ $key }}年 Archive ({{$value.Count}})</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  <div class="sidebar-content related-post">
+    <h3>サイト内検索</h3>
+    <script async src="https://cse.google.com/cse.js?cx=012458736543810277235:x4juxtghjhg"></script>
+    <div class="gcse-search"></div>
+  </div>
+</div>
