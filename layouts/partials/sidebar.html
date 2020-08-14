@@ -23,7 +23,7 @@
     <ul class="list-group">
       {{ range $key, $value := .Site.Taxonomies.categories }}
       <li class="list-group-item">
-        <a href="/categories/{{ $key }}">{{ $key }} ({{$value.Count}})</a>
+        <a href="/categories/{{ $key }}" onClick="ga('send','event','link','click','categories');">{{ $key }} ({{$value.Count}})</a>
       </li>
       {{ end }}
     </ul>
@@ -33,7 +33,7 @@
     <ul class="list-group">
       {{ range $key, $value := .Site.Taxonomies.archive }}
       <li class="list-group-item">
-        <a href="/archive/{{ $key }}">{{ $key }}年 Archive ({{$value.Count}})</a>
+        <a href="/archive/{{ $key }}" onClick="ga('send','event','link','click','archive');">{{ $key }}年 Archive ({{$value.Count}})</a>
       </li>
       {{ end }}
     </ul>
