@@ -41,5 +41,19 @@
                 return t;
             }(document, "script", "twitter-wjs"));
         </script>
+
+        <!-- google custom search -->
+        <script async src="https://cse.google.com/cse.js?cx=012458736543810277235:x4juxtghjhg"></script>
+
+        <!-- google ad -->
+        {{ with .Site.Params.google_ad }}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "{{ . }}",
+            enable_page_level_ads: true
+          });
+        </script>
+        {{ end }}
     </body>
 </html>

@@ -25,16 +25,6 @@
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml" />
 <link rel="icon" href="/image/favicon.ico" />
 
-{{ with .Site.Params.google_ad }}
+{{ with .Site.Params.bing_webmaster }}
 <meta name="msvalidate.01" content="{{ . }}" />
-{{ end }}
-
-{{ with .Site.Params.google_ad }}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "{{ . }}",
-    enable_page_level_ads: true
-  });
-</script>
 {{ end }}
