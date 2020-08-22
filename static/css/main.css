@@ -101,7 +101,7 @@ body {
 }
 
 .sidebar-content {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .navbar {
@@ -131,4 +131,8 @@ pre {
 
 .fixed-contents {
   top: 75px;
+}
+
+footer {
+  margin-top: 2rem;
 }
