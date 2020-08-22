@@ -128,3 +128,7 @@ pre {
 .entry-content img {
   max-width: 100%;
 }
+
+.fixed-contents {
+  top: 75px;
+}

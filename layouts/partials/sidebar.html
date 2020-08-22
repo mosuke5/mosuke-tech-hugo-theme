@@ -7,30 +7,6 @@
       {{ end }}
     </ul>
   </div>
-  {{ $related := .Site.RegularPages.Related . | first 5 }}
-  {{ with $related }}
-  <div class="sidebar-content related-post">
-    <h3>関連する記事</h3>
-    <ul class="list-group">
-      {{ range . }}
-      <li class="list-group-item"><a href="{{ .Permalink }}" onClick="ga('send','event','link','click','related-posts');">{{ .Title }}</a> ({{ .Date.Format "2006/01/02" }})</li>
-      {{ end }}
-    </ul>
-  </div>
-  {{ end }}
-
-  {{ with .Site.Params.google_ad }}
-  <ins class="adsbygoogle"
-  style="display:block"
-  data-ad-client="ca-pub-2753210161325997"
-  data-ad-slot="4759840302"
-  data-ad-format="auto"
-  data-full-width-responsive="true"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  {{ end }}
-
   <div class="sidebar-content related-post">
     <h3>カテゴリー</h3>
     <ul class="list-group">
@@ -51,8 +27,34 @@
       {{ end }}
     </ul>
   </div>
-  <div class="sidebar-content related-post">
+  <div class="sidebar-content custom-search">
     <h3>サイト内検索</h3>
     <div class="gcse-search"></div>
+  </div>
+
+  <div class="fixed-contents position-sticky">
+    {{ $related := .Site.RegularPages.Related . | first 4 }}
+    {{ with $related }}
+    <div class="sidebar-content related-post">
+      <h3>関連する記事</h3>
+      <ul class="list-group">
+        {{ range . }}
+        <li class="list-group-item"><a href="{{ .Permalink }}" onClick="ga('send','event','link','click','related-posts');">{{ .Title }}</a> ({{ .Date.Format "2006/01/02" }})</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Params.google_ad }}
+    <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-2753210161325997"
+    data-ad-slot="4759840302"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    {{ end }}
   </div>
 </div>
