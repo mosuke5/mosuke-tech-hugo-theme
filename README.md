@@ -1,2 +1,2 @@
-- hugo theme for blog.mosuke.tech
+- hugo theme for blog.mosuke.tech and money.mosuke.tech
 - Based on Twitter Bootstrap 4.5.3
