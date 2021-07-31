@@ -28,3 +28,6 @@
 {{ with .Site.Params.bing_webmaster }}
 <meta name="msvalidate.01" content="{{ . }}" />
 {{ end }}
+{{ with .Site.Params.google_site_verification }}
+<meta name="google-site-verification" content="{{ . }}" />
+{{ end }}
