@@ -11,10 +11,10 @@
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" hreflang="ja" href="{{ .Permalink }}" />
 <meta name="twitter:card" content="summary">
-{{ with .Site.Params.twitter }}
+{{ with .Site.Params.twitter -}}
 <meta name="twitter:site" content="{{ . }}" />
 <meta name="twitter:creator" content="{{ . }}" />
-{{ end }}
+{{ end -}}
 <meta name="twitter:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
 <meta name="twitter:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
 <meta property="og:type" content="article">
@@ -25,10 +25,9 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}/index.xml" />
 <link rel="icon" href="/image/favicon.ico" />
-
-{{ with .Site.Params.bing_webmaster }}
+{{ with .Site.Params.bing_webmaster -}}
 <meta name="msvalidate.01" content="{{ . }}" />
-{{ end }}
-{{ with .Site.Params.google_site_verification }}
+{{ end -}}
+{{ with .Site.Params.google_site_verification -}}
 <meta name="google-site-verification" content="{{ . }}" />
-{{ end }}
+{{ end -}}
