@@ -20,6 +20,14 @@
     </script>
     {{ end }}
   </div>
+  <div class="sidebar-content openshift-ad">
+    {{ with .Site.Params.openshift_ad }}
+    <div class="openshift-tettei-nyumon">
+      <p>「OpenShift徹底入門」執筆しました！</p>
+      <a href="https://amzn.to/325lCFr" target="_blank" onclick="gtag('event', 'link', {'event_category': 'sidebar_ad','event_label': 'OpenShift徹底入門'});"><img src="/image/openshift-tettei-nyumon.jpg" class="img-fluid" alt="Responsive image" style="max-width: 200px;"></a>
+    </div>
+    {{ end }}
+  </div>
   <div class="sidebar-content related-post">
     <h3>カテゴリー</h3>
     <ul class="list-group">
