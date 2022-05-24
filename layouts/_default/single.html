@@ -2,7 +2,7 @@
 <div class="entry col-md-8 col-xs-12">
     <h1>{{ .Title }}</h1>
     <div class="entry-sub-title">
-        <span class="">{{ .Date.Format "02 Jan 2006, 15:04" }}</span>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04" }}">{{ .Date.Format "2006-01-02 15:04" }}</time>
         <span class="">By {{ .Params.author }}</span>
         {{ if isset .Params "categories" }}
             {{ range .Params.categories }}
