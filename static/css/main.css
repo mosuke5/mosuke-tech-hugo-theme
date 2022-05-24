@@ -100,6 +100,11 @@ body {
   margin: 1rem 0;
 }
 
+.publish-date > p {
+  display: inline;
+  margin-right: 1em;
+}
+
 .sidebar-content {
   margin: 2rem 0;
 }
