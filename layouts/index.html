@@ -3,8 +3,7 @@
   {{ range .Paginator.Pages -}}
   <h1><a href="{{ .Permalink }}" class="entry-title">{{ .Title }}</a></h1>
   <div class="entry-sub-title">
-      <span class="">{{ .Date.Format "02 Jan 2006, 15:04" }}</span>
-      <span class="">By {{ .Params.author }}</span>
+      <span class="">{{ .Date.Format "2006-01-02" }}</span>
       {{ if isset .Params "categories" -}}
           {{ range .Params.categories -}}
               <a class="badge badge-inf post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}">{{ . }}</a>
