@@ -7,13 +7,13 @@
         <span class="">{{ .Date.Format "2006-01-02" }}</span>
         {{ if isset .Params "categories" }}
             {{ range .Params.categories }}
-                <a class="badge badge-inf post-category post-category-{{ . }}" href="/categories/{{ . | urlize }}">{{ . }}</a>
+                <a class="badge badge-inf post-category post-category-{{ . }}" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
             {{ end }}
         {{ end }}
     </div>
     <div class="entry-content">
         {{ .Summary }}
-        <a href="{{ .Permalink }}">続きを読む</a>
+        <a href="{{ .Permalink }}">{{ i18n "read-more" }}</a>
     </div>
     {{ end }}
     {{- partial "pagenation.html" . -}}
