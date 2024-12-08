@@ -1,5 +1,10 @@
 {{ define "main" }}
 <div class="entry col-md-8 col-xs-12">
+    {{ if .Params.image }}
+    <div class="entry-header-image">
+        <img src="{{ .Params.image }}" class="img-fluid" alt="Header image">
+    </div>
+    {{ end }}
     <h1>{{ .Title }}</h1>
     <div class="entry-sub-title">
         <div class="publish-date">
